@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="US-en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dragon Slayer Game</title>
+  </head>
+  <body>
+    <h1>Dragon Slayer!</h1>
+    <p>Answer 3 riddles to aquire equipment to face the dragon. Block the attacks correctly for an opportunity to slay it!</p>
+    <script>
+      // Dragon Slayer Game
+      
+      // Declaring Variables
+      var riddle1 = "";
+      var riddle2 = "";
+      var riddle3 = "";
+      var riddleAnswer1 = "a die";
+      var riddleAnswer2 = "fire";
+      var riddleAnswer3 = "a name";
+      var attack1 = "";
+      var attack2 = "";
+      var block1 = "shield";
+      var block2 = "ice wall spell";
+      var message = "";
+      
+      // riddle 1
+      while(riddle1 != riddleAnswer1){
+        riddle1 = prompt("What has six faces, but does not wear makeup, has twenty-one eyes, but cannot see?(Answer in lower case text only)");
+        if(riddle1 === riddleAnswer1){
+          message = alert("Congratulations! You've recieved a Sword!");
+        }else{
+          message = alert("that answer is wrong, please try again.");
+        }
+      }
+      
+      // riddle 2
+      while(riddle2 != riddleAnswer2){
+        riddle2 = prompt("I am not alive, but I grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I?(Answer in lower case text only)");
+        if(riddle2 === riddleAnswer2){
+          message = alert("Congratulations! You've recieved a spell of Ice Wall");
+        }else{
+          message = alert("that answer is wrong, please try again.");
+        }
+      }
+      
+      // riddle 3
+      while(riddle3 != riddleAnswer3){
+        riddle3 = prompt("Passed from father to son, and shared between brothers. Its importance is unquestioned, though it is used more by others(Answer in lower case text only)");
+        if(riddle3 === riddleAnswer3){
+          message = alert("Congratulations! You've recieved a suit of armor and a shield. As you finish donning your armor a mighty Dragon swoops down and you are meow face to face with a mighty foe!");
+        }else{
+          message = alert("that answer is wrong, please try again.");
+        }
+      }
+      
+      // attack 1
+      while(attack1 != block1){
+        attack1 = prompt("The dragon lands and lunges at you with a massive clawed hand, do you use the shield or the ice wall spell to block?(Answer in lower case text only)");
+        if(attack1 === block1){
+          message = alert("As you block the dragon's claw with your shield, the blow pushes you away from the creature, alive but not unharmed.");
+        }else{
+          message = alert("the dragon's claw breaks through the ice wall and grabs you, you are meow food. resetting to save point.");
+        }
+      }
+      
+      // attack 2 and defeating the dragon
+      while(attack2 != block2){
+        attack2 = prompt("The dragon's breast swells and you can smell smoke on the air. He's about to breathe fire! do you block with your shield or an ice wall spell?(answer in lower case text only)");
+        if(attack2 === block2){
+          message = alert("You block the dragon's breath with the ice wall spell. The two forces meet and explode into a mist covering the area. The dragon cannot see you but you can see it, it's neck is exposed and you go in for the kill with your sword! Congratulations, You have slain the dragon!");
+        }else{
+          message = alert("the dragon's breath burns you alive in your armor. resetting to save point.");
+        }
+      }
+    </script>
+  </body>
+</html>

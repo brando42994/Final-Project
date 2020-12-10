@@ -1,0 +1,93 @@
+Problem statement: Write a program that asks users to answer three riddles. For each riddle, the user will be given an
+      item for a correct answer to the riddle. With all three items in hand the user will fight a mighty dragon. During the fight
+      the user must block two attacks from the dragon with the appropriate item and then they will get a chance to slay the dragon.
+      
+      Nouns: riddle, correct answer, item
+      Verbs: asks, fight, block
+
+      Defining diagram:
+      Inputs: riddle answers, blocks
+      Processes: determine if answers and blocks are correct.
+      Output: items received, blocks correct, dragon slain.
+
+      Solution Algorithm:
+      DragonSlayer
+        Initialize riddle1
+        Initialize riddle2
+        Initialize riddle3
+        Initialize riddleAnswer1
+        Initialize riddleAnswer2
+        Initialize riddleAnswer3
+        Initialize attack1
+        Initialize attack2
+        Initialize block1
+        Initialize block2
+        Initialize message
+        
+        WHILE riddle1 does not equal riddleAnswer1
+          Prompt for riddle1 with "what is your answer to the riddle?"
+          IF riddle1 equals riddleAnswer1 THEN user recieves item
+            ELSE ask user to try again
+          ENDIF
+        ENDWHILE
+        
+        WHILE riddle2 does not equal riddleAnswer2
+          Prompt for riddle2 with "what is your answer to the riddle?"
+          IF riddle2 equals riddleAnswer2 THEN user recieves item
+            ELSE ask user to try again
+          ENDIF
+        ENDWHILE
+        
+        WHILE riddle3 does not equal riddleAnswer3
+          Prompt for riddle3 with "what is your answer to the riddle?"
+          IF riddle3 equals riddleAnswer3 THEN user recieves item
+            ELSE ask user to try again
+          ENDIF
+        ENDWHILE
+        
+        WHILE attack1 does not equal block1
+          Prompt for attack1 with "do you use the shield or the ice wall spell to block?"
+          IF attack1 equals block1 THEN user blocks attack and moves on to attack2
+            ELSE user dies and must respawn from save point
+          ENDIF
+        ENDWHILE
+        
+        WHILE attack2 does not equal block2
+          Prompt for attack2 with "do you use the shield or the ice wall spell to block?"
+          IF attack2 equals block2 THEN user blocks attack and slays the dragon
+            ELSE user dies and must respawn from save point
+          ENDIF
+        ENDWHILE
+      END
+      
+      Test plan 1:
+      
+      Inputs: a die, fire, a name, shield, ice wall spell
+      
+      Expected output: Congratulations, You have slain the dragon!
+      
+      Actual output: Congratulations, You have slain the dragon!
+      
+      Test plan 2: 
+      
+      Inputs: 7
+      
+      Expected output: that answer is wrong, please try again.
+      
+      Actual output: that answer is wrong, please try again.
+      
+      Test plan 3:
+      
+      Inputs: a die, fire, a name, mlep
+      
+      Expected output: the dragon's claw breaks through the ice wall and grabs you, you are meow food. resetting to save point.
+      
+      Actual output: the dragon's claw breaks through the ice wall and grabs you, you are meow food. resetting to save point.
+      
+      Test plan 4:
+      
+      Inputs: a die, fire, a name, shield, shield
+      
+      Expected output: the dragon's breath burns you alive in your armor. resetting to save point.
+      
+      Actual output: the dragon's breath burns you alive in your armor. resetting to save point.
